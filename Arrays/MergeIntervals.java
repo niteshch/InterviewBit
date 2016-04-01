@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*Merge Intervals
 Given a set of non-overlapping intervals, insert a new interval into the intervals (merge if necessary).
 
@@ -23,6 +25,12 @@ Make sure the returned intervals are also sorted.*/
  *     Interval(int s, int e) { start = s; end = e; }
  * }
  */
+class Interval {
+	int start;
+	int end;
+	Interval() { start = 0; end = 0; }
+	Interval(int s, int e) { start = s; end = e; }
+}
 public class MergeIntervals {
     public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
     

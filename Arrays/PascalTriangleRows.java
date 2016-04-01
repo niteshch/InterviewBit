@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*Pascal Triangle Rows
 Given numRows, generate the first numRows of Pascal’s triangle.
 

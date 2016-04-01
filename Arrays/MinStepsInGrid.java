@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /*
 Min Steps in Infinite Grid
 You are in an infinite 2D grid where you can move in any of the 8 directions :
@@ -19,7 +21,7 @@ Input : [(0, 0), (1, 1), (1, 2)]
 Output : 2
 It takes 1 step to move from (0, 0) to (1, 1). It takes one more step to move from (1, 1) to (1, 2).
 
-This question is intentionally left slightly vague. Clarify the question by trying out a few cases in the “See Expected Output” section.
+This question is intentionally left slightly vague.
 */
 public class MinStepsInGrid {
     // X and Y co-ordinates of the points in order.

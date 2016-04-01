@@ -1,3 +1,6 @@
+import java.util.Collections;
+import java.util.List;
+
 /*Find Duplicate in Array
 Given a read only array of n + 1 integers between 1 and n, find one number that repeats in linear time using less then O(n) space and traversing the stream sequentially O(1) times.
 
