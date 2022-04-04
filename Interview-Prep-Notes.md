@@ -40,7 +40,7 @@
 	+ Insert `(2*newMin-oldMin)` to stack which will be less than `newMin`. When popping the element `e`, if less than `min` then compute the `oldMin = 2*min - e` and return `min`.
 
 - Windowed Stream of numbers median
-	+ Use max heap to store smaller elements and min heap to store larger elements. Keep balancing them when the height of differs by more than 1.
+	+ Use max heap to store smaller elements and min heap to store larger elements. Keep balancing them when the height of the two differs by more than 1.
 	+ Median = one of the roots of min or max heap depending on size or average of roots in case the size is equal.
 
 
@@ -64,7 +64,7 @@
 - Delete from BST
 	+ In case of leaf node, simply delete the node. In case of node with single child, replace node with child subtree. In case of node with two children, copy contents of inorder successor to the node.
 - Smallest Subtree with all the Deepest Nodes
-	+ 
+	+ Run DFS for the left and right nodes. When `root == null`, return `<null,0>`. Else compare left distance and right distance. When the two distances are same, then current node is deepest node, return `<node, dist + 1>`. Otherwise return `<L or R, L.dist or R.dist>`.
 
 ## Strings
 - Haystack Needle
@@ -79,6 +79,7 @@
 	+ start with `left = 0, right = n - 1`. if characters match, then increment `matched`. If they don't match, check if `matched > 0`, set `r = r + matched`, reset `matched = 0`, `count = count++`. If `matched = 0` then increment `count` and `l`.
 
 - Minimum Window Substring
+	+ Construct a map of characters of the pattern to lookup in the string. Use sliding window to move the right pointer and characters to window count map. Use a counter `formed` which keeps track of keys that have matched on counts for both lookup and window maps. When `formed` equals `required`, check for min length based on left and right pointers and update ans. Run a while loop to shrink the left-right window by moving left up and decrementing formed when the count differs.
 	
 
 ## Dynamic Programming
